@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wordle (4 letters)"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ANSWER: STAR"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/etGuess"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
+        android:hint="TYPE 4 LETTERS"
+        android:inputType="textCapCharacters"
+        android:maxLength="4"
+        app:layout_constraintEnd_toStartOf="@id/btnSubmit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:text="ABCD" />
+
+    <!-- Row 1 -->
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="94dp"
+        android:layout_height="47dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="@id/etGuess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etGuess"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:visibility="gone"
+        android:minWidth="96dp"
+        android:minHeight="48dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintTop_toBottomOf="@id/etGuess"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tvGuess1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guess 1:"
+        app:layout_constraintTop_toBottomOf="@id/btnReset"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvGuess1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="SAIL"
+        app:layout_constraintTop_toTopOf="@id/tvGuess1Label"
+        app:layout_constraintStart_toEndOf="@id/tvGuess1Label"
+        app:layout_constraintEnd_toStartOf="@id/tvCheck1"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/tvCheck1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="O+XX"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tvGuess1Label"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Row 2 -->
+    <TextView
+        android:id="@+id/tvGuess2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guess 2:"
+        app:layout_constraintTop_toBottomOf="@id/tvGuess1Label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tvGuess2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="TREE"
+        app:layout_constraintTop_toTopOf="@id/tvGuess2Label"
+        app:layout_constraintStart_toEndOf="@id/tvGuess2Label"
+        app:layout_constraintEnd_toStartOf="@id/tvCheck2"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/tvCheck2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="X+XO"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tvGuess2Label"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Row 3 -->
+    <TextView
+        android:id="@+id/tvGuess3Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guess 3:"
+        app:layout_constraintTop_toBottomOf="@id/tvGuess2Label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/tvGuess3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="STAR"
+        app:layout_constraintTop_toTopOf="@id/tvGuess3Label"
+        app:layout_constraintStart_toEndOf="@id/tvGuess3Label"
+        app:layout_constraintEnd_toStartOf="@id/tvCheck3"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/tvCheck3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="OOOO"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tvGuess3Label"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
